@@ -1,0 +1,14 @@
+<h1> ALL THE STUDENTS </h1>
+
+<% for student in @students %>
+<p> Name: <%= student.first_name %> <%= student.last_name %></p>
+<p> House: <%= student.house.name %></p>
+<p> Age: <%= student.age %></p>
+<form method="get" action="/students/<%=student.id%>">
+ <input type="submit" value="View Student Record"/>
+</form>
+<% end %>
+
+<form method="get" action="/students/new">
+ <input type="submit" value="Add Student"/>
+</form>
